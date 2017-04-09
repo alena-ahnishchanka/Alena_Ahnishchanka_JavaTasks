@@ -1,5 +1,6 @@
 package Gift.IOStreamsReadWrite;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -9,13 +10,19 @@ import java.io.IOException;
 
 public class IOStreamsReadWrite {
 
-    public IOStreamsReadWrite() throws IOException{
+    File source;
+    File dest;
+
+    public IOStreamsReadWrite(File source, File dest) throws IOException{
+        this.source = source;
+        this.dest = dest;
+
         FileInputStream in = null;
         FileOutputStream out = null;
 
         try{
-            in = new FileInputStream("source.txt");
-            out = new FileOutputStream("dest.txt");
+            in = new FileInputStream(source);
+            out = new FileOutputStream(dest);
             int c;
             while ((c = in.read()) != -1) {
                 out.write(c);
@@ -30,4 +37,3 @@ public class IOStreamsReadWrite {
             }
     }
 }
-
