@@ -25,10 +25,10 @@ public class GiftTest {
 
     public static void main(String[] args) {
 
- // Создание списка для хранения конфет и их свойств
+ // РЎРѕР·РґР°РЅРёРµ СЃРїРёСЃРєР° РґР»СЏ С…СЂР°РЅРµРЅРёСЏ РєРѕРЅС„РµС‚ Рё РёС… СЃРІРѕР№СЃС‚РІ
         ArrayList<Candy> candyList = new ArrayList<>();
 
-// Добавление конфет в подарок (список)
+// Р”РѕР±Р°РІР»РµРЅРёРµ РєРѕРЅС„РµС‚ РІ РїРѕРґР°СЂРѕРє (СЃРїРёСЃРѕРє)
         candyList.add(new LollipopCandy ("Barbaris", 85.5));
         candyList.add(new PureBlackChocolateCandy ("Ferrero Rocher", 32));
         candyList.add(new ChocolateWithWafflesCandy ("Mishka na severe", 56.5));
@@ -36,7 +36,7 @@ public class GiftTest {
         candyList.add(new ChocolateWithJellyCandy("BelochkaJelly", 60));
         candyList.add(new ToffeeCandy("BelochkaToffeeLittle", 20));
 
-// Вывод списка названий всех конфет в подарке до сортировки:
+// Р’С‹РІРѕРґ СЃРїРёСЃРєР° РЅР°Р·РІР°РЅРёР№ РІСЃРµС… РєРѕРЅС„РµС‚ РІ РїРѕРґР°СЂРєРµ РґРѕ СЃРѕСЂС‚РёСЂРѕРІРєРё:
         System.out.println("List of candies in the gift before sorting: ");
         System.out.println();
 
@@ -44,7 +44,7 @@ public class GiftTest {
             System.out.println(d.getName() + " " + d.getWeight() + "g");
         }
 
-// Сортировка конфет по названию и вывод отсортированных конфет
+// РЎРѕСЂС‚РёСЂРѕРІРєР° РєРѕРЅС„РµС‚ РїРѕ РЅР°Р·РІР°РЅРёСЋ Рё РІС‹РІРѕРґ РѕС‚СЃРѕСЂС‚РёСЂРѕРІР°РЅРЅС‹С… РєРѕРЅС„РµС‚
         Collections.sort(candyList, new CandyNameComparator());
         System.out.println();
         System.out.println("Order of candies sorted by name: ");
@@ -54,14 +54,14 @@ public class GiftTest {
             System.out.println(candyList.get(i).getName() + " " + candyList.get(i).getWeight() + "g");
         }
 
-// Определение веса всех конфет в подарке:
+// РћРїСЂРµРґРµР»РµРЅРёРµ РІРµСЃР° РІСЃРµС… РєРѕРЅС„РµС‚ РІ РїРѕРґР°СЂРєРµ:
         for(int i=0; i < candyList.size(); i++){
             GiftWeight.candiesWeight += candyList.get(i).getWeight();
         }
         System.out.println();
         System.out.println("Candies total weight = " + GiftWeight.candiesWeight);
 
-// Выбор параметров и вывод названий конфет, соответствующих заданному диапазону параметров
+// Р’С‹Р±РѕСЂ РїР°СЂР°РјРµС‚СЂРѕРІ Рё РІС‹РІРѕРґ РЅР°Р·РІР°РЅРёР№ РєРѕРЅС„РµС‚, СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓСЋС‰РёС… Р·Р°РґР°РЅРЅРѕРјСѓ РґРёР°РїР°Р·РѕРЅСѓ РїР°СЂР°РјРµС‚СЂРѕРІ
         System.out.println();
         System.out.println("Candies that correspond to a range of parameters: ");
         System.out.println();
@@ -72,7 +72,7 @@ public class GiftTest {
             }
         }
 
-// Добавление жвачек в подарок, вывод списка названий всех жвачек в подарке:
+// Р”РѕР±Р°РІР»РµРЅРёРµ Р¶РІР°С‡РµРє РІ РїРѕРґР°СЂРѕРє, РІС‹РІРѕРґ СЃРїРёСЃРєР° РЅР°Р·РІР°РЅРёР№ РІСЃРµС… Р¶РІР°С‡РµРє РІ РїРѕРґР°СЂРєРµ:
         ArrayList<BubbleGum> bubbleGumList = new ArrayList<>();
         bubbleGumList.add(new CocaColaBubbleGum("Cola Aromali", 25.0));
         bubbleGumList.add(new BananaBubbleGum("Bombibom Banana", 28.0));
@@ -85,14 +85,14 @@ public class GiftTest {
             System.out.println(d.getName() + " " + d.getWeight() + "g");
         }
 
-// Определение веса всех жвачек в подарке:
+// РћРїСЂРµРґРµР»РµРЅРёРµ РІРµСЃР° РІСЃРµС… Р¶РІР°С‡РµРє РІ РїРѕРґР°СЂРєРµ:
         for(int i=0; i < bubbleGumList.size(); i++){
             GiftWeight.bubbleGumsWeight += bubbleGumList.get(i).getWeight();
         }
         System.out.println();
         System.out.println("Bubble gums total weight = " + GiftWeight.bubbleGumsWeight);
 
-// Добавление печенья в подарок, вывод списка названий всего печенья в подарке:
+// Р”РѕР±Р°РІР»РµРЅРёРµ РїРµС‡РµРЅСЊСЏ РІ РїРѕРґР°СЂРѕРє, РІС‹РІРѕРґ СЃРїРёСЃРєР° РЅР°Р·РІР°РЅРёР№ РІСЃРµРіРѕ РїРµС‡РµРЅСЊСЏ РІ РїРѕРґР°СЂРєРµ:
         ArrayList<Cookie> cookieList = new ArrayList<>();
         cookieList.add(new ShortbreadCookie("Princess", 65.5));
         cookieList.add(new ChocolateCookie("ChocoPie", 45.0));
@@ -108,18 +108,18 @@ public class GiftTest {
             System.out.println(d.getName() + " " + d.getWeight() + "g");
         }
 
-// Определение веса всего печенья в подарке:
+// РћРїСЂРµРґРµР»РµРЅРёРµ РІРµСЃР° РІСЃРµРіРѕ РїРµС‡РµРЅСЊСЏ РІ РїРѕРґР°СЂРєРµ:
         for(int i=0; i < cookieList.size(); i++){
             GiftWeight.cookiesWeight += cookieList.get(i).getWeight();
         }
         System.out.println();
         System.out.println("Cookies total weight = " + GiftWeight.cookiesWeight);
 
-// Добавление коробки, вывод ее типа и веса
+// Р”РѕР±Р°РІР»РµРЅРёРµ РєРѕСЂРѕР±РєРё, РІС‹РІРѕРґ РµРµ С‚РёРїР° Рё РІРµСЃР°
         MetalBox mbox1 = new MetalBox(100);
         mbox1.giftBoxInfo();
 
-// Определение и вывод веса всего подарка:
+// РћРїСЂРµРґРµР»РµРЅРёРµ Рё РІС‹РІРѕРґ РІРµСЃР° РІСЃРµРіРѕ РїРѕРґР°СЂРєР°:
         System.out.println();
         GiftWeight giftWeight = new GiftWeight();
         giftWeight.giftWeight();
