@@ -201,11 +201,11 @@ public class GiftTest {
 
 // Reading data from file / writing data to file using I/O Streams (with exception):
 
-            File source = new File("source.txt");
-            File dest = new File("dest.txt");
+            File source1 = new File("source1.txt");
+            File dest1 = new File("dest1.txt");
 
-            source.delete();
-            dest.delete();
+            source1.delete();
+            dest1.delete();
 
 // catch IOException
 
@@ -233,21 +233,11 @@ public class GiftTest {
                 }
             }
 
-// create 'source' and 'dest' files for reading and writing data
-
-            try {
-                source.createNewFile();
-            } catch (IOException e1) {
-                e1.printStackTrace();
-            }
-
-            try {
-                source.createNewFile();
-            } catch (IOException e1) {
-                e1.printStackTrace();
-            }
 
 // Reading data from file / writing data to file using I/O Streams (successfully):
+
+            File source = new File("source.txt");
+            File dest = new File("dest.txt");
 
             try {
                 IOStreamsReadWrite stream = new IOStreamsReadWrite();
@@ -263,4 +253,6 @@ public class GiftTest {
         }
     }
 }
+
+
 
