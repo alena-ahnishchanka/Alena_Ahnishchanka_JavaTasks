@@ -21,6 +21,5 @@ public class GiftWeight implements Gift{
 
         giftWeight = boxWeight + contentWeight;
         System.out.println("Total gift weight is: " + giftWeight);
-    };
-
+    }
 }
