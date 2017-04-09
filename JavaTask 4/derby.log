@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Sun Apr 09 12:31:20 MSK 2017:
+ Производится загрузка Derby версии The Apache Software Foundation - Apache Derby - 10.13.1.1 - (1765088): экземпляр a816c00e-015b-520d-ae76-000006dd4e10
+в каталоге базы данных D:\JAVA studying\ALL\JavaTask 4\my_db sun.misc.Launcher$AppClassLoader@355da254 
+
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_121-b13
+user.dir=D:\JAVA studying\ALL\JavaTask 4
+os.name=Windows 8
+os.arch=amd64
+os.version=6.2
+derby.system.home=null
+Запущен загрузчик классов базы данных - derby.database.classpath=''

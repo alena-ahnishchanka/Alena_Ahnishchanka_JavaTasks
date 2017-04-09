@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gift>
+    <box/>
+    <content>
+        <bubble_gums/>
+        <candies/>
+        <cookies>
+            <chocolate/>
+            <shortbread>
+                <cookie id="0001">
+			    <name>Sugar Shortbread</name>
+			        <weight>65</weight>
+			    </cookie>
+			    <cookie id="0002">
+			        <name>Milk Shortbread</name>
+			        <weight>105</weight>
+			    </cookie>
+				<cookie id="0003">
+			        <name>Children Dream</name>
+			        <weight>45</weight>
+			    </cookie>
+            </shortbread>
+        </cookies>
+    </content>
+</gift>
