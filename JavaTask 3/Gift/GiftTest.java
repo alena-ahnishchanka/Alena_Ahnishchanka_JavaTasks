@@ -200,17 +200,10 @@ public class GiftTest {
 
 
 // Reading data from file / writing data to file using I/O Streams (with exception):
-
-            File source1 = new File("source1.txt");
-            File dest1 = new File("dest1.txt");
-
-            source1.delete();
-            dest1.delete();
-
 // catch IOException
 
             try {
-                IOStreamsReadWrite stream = new IOStreamsReadWrite();
+                IOStreamsReadWrite stream = new IOStreamsReadWrite(new File("source1.txt"), new File("dest1.txt"));
             } catch (IOException e1) {
                     System.out.println("!!!   IOException is catched: specified file is not found. Please check the file's existence.");
 //                    e1.printStackTrace();
@@ -222,7 +215,7 @@ public class GiftTest {
 // catch FileDoesNotExistException
 
             try {
-                IOStreamsReadWrite stream = new IOStreamsReadWrite();
+                IOStreamsReadWrite stream = new IOStreamsReadWrite(new File("source1.txt"), new File("dest1.txt"));
             } catch (IOException e1) {
                 try {
                     throw new FileDoesNotExistException("(Не удается найти указанный файл)");
@@ -236,11 +229,8 @@ public class GiftTest {
 
 // Reading data from file / writing data to file using I/O Streams (successfully):
 
-            File source = new File("source.txt");
-            File dest = new File("dest.txt");
-
             try {
-                IOStreamsReadWrite stream = new IOStreamsReadWrite();
+                IOStreamsReadWrite stream = new IOStreamsReadWrite(new File("source.txt"), new File("dest.txt"));
                 System.out.println("Reading data from file / writing data to file using I/O Streams was performed successfully.");
             } catch (IOException e1) {
                 try {
@@ -253,6 +243,4 @@ public class GiftTest {
         }
     }
 }
-
-
 
